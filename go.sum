@@ -1,0 +1,4 @@
+github.com/barkimedes/go-deepcopy v0.0.0-20220514131651-17c30cfc62df h1:GSoSVRLoBaFpOOds6QyY1L8AX7uoY+Ln3BHc22W40X0=
+github.com/barkimedes/go-deepcopy v0.0.0-20220514131651-17c30cfc62df/go.mod h1:hiVxq5OP2bUGBRNS3Z/bt/reCLFNbdcST6gISi1fiOM=
+github.com/kaloseia/clone v0.0.0-20240601081950-41de0e12ccb4 h1:KrvtOfoRvXaRJgAOqIRd4CgBqg4lZ2p0qBz6sRg4qW8=
+github.com/kaloseia/clone v0.0.0-20240601081950-41de0e12ccb4/go.mod h1:7WCoAMMzw+oRQq5HdR+v1emyTQDkSGw1W47f2zqguoE=
