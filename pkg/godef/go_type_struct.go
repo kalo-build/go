@@ -53,17 +53,17 @@ func (t GoTypeStruct) GetSyntaxLocal() string {
 	return t.Name
 }
 
+func (t GoTypeStruct) DeepClone() GoTypeStruct {
+	return GoTypeStruct{
+		PackagePath: t.PackagePath,
+		Name:        t.Name,
+	}
+}
+
 func (t GoTypeStruct) getPackageName() string {
 	if t.PackagePath == "" {
 		return ""
 	}
 	packagePieces := strings.Split(t.PackagePath, "/")
 	return packagePieces[len(packagePieces)-1]
-}
-
-func (t GoTypeStruct) DeepClone() GoTypeStruct {
-	return GoTypeStruct{
-		PackagePath: t.PackagePath,
-		Name:        t.Name,
-	}
 }
