@@ -1,5 +1,7 @@
 package godef
 
+import "strings"
+
 // GoTypeDerived represents a defined type that is derived from another type (ie. `type Nationality string`).
 type GoTypeDerived struct {
 	// PackagePath is the fully qualified import path
@@ -44,10 +46,11 @@ func (t GoTypeDerived) GetImports() []string {
 }
 
 func (t GoTypeDerived) GetSyntax() string {
-	if t.PackagePath == "" {
+	packageName := t.getPackageName()
+	if packageName == "" {
 		return t.GetSyntaxLocal()
 	}
-	return t.PackagePath + "." + t.Name
+	return packageName + "." + t.Name
 }
 
 func (t GoTypeDerived) GetSyntaxLocal() string {
@@ -60,4 +63,12 @@ func (t GoTypeDerived) DeepClone() GoTypeDerived {
 		Name:        t.Name,
 		BaseType:    DeepCloneGoType(t.BaseType),
 	}
+}
+
+func (t GoTypeDerived) getPackageName() string {
+	if t.PackagePath == "" {
+		return ""
+	}
+	packagePieces := strings.Split(t.PackagePath, "/")
+	return packagePieces[len(packagePieces)-1]
 }
