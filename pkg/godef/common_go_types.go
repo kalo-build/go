@@ -17,7 +17,7 @@ var (
 		Syntax: "uint",
 	}
 	GoTypeFloat = GoTypePrimitive{
-		Syntax: "float",
+		Syntax: "float64",
 	}
 	GoTypeBool = GoTypePrimitive{
 		Syntax: "bool",
