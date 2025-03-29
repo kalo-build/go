@@ -1,6 +1,6 @@
 package godef
 
-import "github.com/kaloseia/clone"
+import "github.com/kalo-build/clone"
 
 type StructMethod struct {
 	ReceiverName string

@@ -2,7 +2,7 @@ package godef
 
 import (
 	"github.com/barkimedes/go-deepcopy"
-	"github.com/kaloseia/clone"
+	"github.com/kalo-build/clone"
 )
 
 // DeepCloneGoTypeMap attempts to deep clone a map of GoTypes.
